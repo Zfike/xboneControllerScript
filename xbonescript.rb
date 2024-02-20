@@ -50,8 +50,8 @@ class Interpreter
     end
 
     def execute(instruction)
-        puts "executing instruction: #{instruction}"
-        puts "Top of stack: #{@stack[-1]}" if @stack.any?
+        # puts "executing instruction: #{instruction}"
+        # puts "Top of stack: #{@stack[-1]}" if @stack.any?
         
         case instruction
         when 'A BUTTON'
@@ -125,7 +125,7 @@ class Interpreter
             reverse_string = input_string.reverse
             reverse_string.each_char { |c| @output_buffer << c }
         when 'START BUTTON'
-            puts @output_buffer
+            puts "output: #{@output_buffer}"
             return
         end
     end
