@@ -21,4 +21,6 @@ Here's the rules:
 Now my repeater.xbos does not work entirely right (probably due to my quickly depleting brain power). <br>
 To test it I inputed the character '/' and then 3 for the count <br>
 I have proof that the correct count was used: <br>
-![Code_6rcYtZpxoJ](https://github.com/Zfike/xboneControllerScript/assets/97480418/b104aca7-e1ec-4aaf-9fa4-5f2b1507e818)
+![Code_6rcYtZpxoJ](https://github.com/Zfike/xboneControllerScript/assets/97480418/b104aca7-e1ec-4aaf-9fa4-5f2b1507e818) <br>
+<br>
+Love, Zane
