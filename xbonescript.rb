@@ -50,8 +50,8 @@ class Interpreter
     end
 
     def execute(instruction)
-        puts "executing instruction: #{instruction}"
-        puts "Top of stack: #{@stack[-1]}" if @stack.any?
+        # puts "executing instruction: #{instruction}"
+        # puts "Top of stack: #{@stack[-1]}" if @stack.any?
         
         case instruction
         when 'A BUTTON'
