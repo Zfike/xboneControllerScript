@@ -131,9 +131,36 @@ class Interpreter
     end
 end
 
-interpreter = Interpreter.new
-interpreter.load_from_file('reverse.xbos')
-interpreter.interpret
+File.open('controller_inputs.xbos', 'w') do |file|
+  on :controller do |event|
+    case event.type
+    when :button_down
+      case event.button
+      when :a, :b, :x, :y, :left_shoulder, :right_shoulder, :start, :back
+        file.puts "#{event.button.to_s.upcase} BUTTON"
+      when :up, :down, :left, :right
+        file.puts "DPAD #{event.button.to_s.upcase}"
+      end
+    when :axis
+      case event.axis
+      when :trigger_left
+        file.puts "LEFT TRIGGER #{event.value}"
+      when :trigger_right
+        file.puts "RIGHT TRIGGER #{event.value}"
+      end
+    when :dpad_up
+      file.puts "DPAD UP #{event.value}"
+    end
+  end
+end
 
+interpreter = Interpreter.new
+interpreter.load_from_file('controller_inputs.xbos')
+
+update do
+  interpreter.interpret
+end
+
+show
 
 # Love, Zane
